@@ -14,6 +14,10 @@ function App() {
     setTextFieldInput(e.target.value)
   }
 
+  const onScanButtonClick = () => {
+    console.log(textFieldInput)
+  }
+
   return (
     <div className="App">
       <Container>
@@ -25,7 +29,7 @@ function App() {
             label="Bucket Name"
             variant="filled"
             color='primary'/>
-          <Button sx={{maxWidth: "xs"}} variant="contained"> Scan Now </Button>
+          <Button onClick={onScanButtonClick} sx={{maxWidth: "xs"}} variant="contained"> Scan Now </Button>
         </Stack>
       </Container>
     </div>
